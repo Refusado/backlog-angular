@@ -1,0 +1,14 @@
+<div>
+  <h3>{{ type }}</h3>
+  <p [ngSwitch]="type">
+    <span *ngSwitchCase="'User'">Este é o card para um usuário comum e possue apenas algumas ferramentas</span>
+    <span *ngSwitchCase="'Admin'">Este é o card para um administrador e possue todas as ferramentas disponíveis</span>
+    <span *ngSwitchCase="'Superadmin'">Este é o card para um super administrador e pode gerenciar as ferramentas e demais usuários</span>
+  </p>
+
+  <ul>
+    <li *ngFor="let product of products; let i = index">{{ product }} <span (click)="removeItem(i)">✖</span></li>
+  </ul>
+
+  <button class="add-item" *ngIf="showingBtn" (click)="addItem()">Adicionar item</button>
+</div>

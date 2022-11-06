@@ -1,3 +1,12 @@
 app-card {
   font-family: sans-serif;
 }
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: min(92vw, 1720px);
+  margin: 60px auto;
+  gap: 80px;
+}

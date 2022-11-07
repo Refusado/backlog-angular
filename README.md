@@ -5,3 +5,10 @@ Projeto de desenvolvimento para revisar diretivas no angular acompanhando o curs
 ## Versão
 
 O projeto foi desenvolvido usando a versão 14.2.1. do Angular CLI.
+
+
+## Deploy
+
+O projeto foi hospedado no próprio github com o auxilio da biblioteca [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages) e você conferir acessando este link:
+
+  - https://refusado.github.io/diretivas-angular/

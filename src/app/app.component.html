@@ -1,11 +1,16 @@
-<div class="card-container">
-  <app-card [type]="'User'" *ngIf="showingCard; else unvailableCard"></app-card>
-  <app-card [type]="'Admin'" *ngIf="showingCard2; else unvailableCard"></app-card>
-  <app-card [type]="'Superadmin'" *ngIf="showingCard3; else unvailableCard"></app-card>
-</div>
+<header>
+  <button (click)="changeMode()" id="styleMode"><span [ngClass]="btnClass"></span>Dark mode</button>
+</header>
+<main>
+  <div class="card-container">
+    <app-card [type]="'User'" *ngIf="showingCard; else unvailableCard"></app-card>
+    <app-card [type]="'Admin'" *ngIf="showingCard2; else unvailableCard"></app-card>
+    <app-card [type]="'Superadmin'" *ngIf="showingCard3; else unvailableCard"></app-card>
+  </div>
+</main>
 
-<ng-template #unvailableCard>
-  <span>Não foi possível exibir este card :\</span>
+  <ng-template #unvailableCard>
+    <span>Não foi possível exibir este card :\</span>
 </ng-template>
 
 <router-outlet></router-outlet>

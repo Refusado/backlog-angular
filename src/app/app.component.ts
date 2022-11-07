@@ -14,4 +14,22 @@ export class AppComponent {
   showingCard3: boolean = true;
 
   cardType: string = 'computer';
+
+  currentMode: string   = 'dark';
+  isDarkMode: boolean = true;
+  btnClass: string = 'unable';
+
+  changeMode() {
+    if (this.isDarkMode) {
+      this.isDarkMode = false;
+      this.currentMode  = 'light';
+      this.btnClass = 'disable';
+    } else {
+      this.isDarkMode = true;
+      this.currentMode = 'dark';
+      this.btnClass= 'unable';
+    }
+  }
+
+
 }

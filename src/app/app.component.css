@@ -24,17 +24,37 @@
 }
 
 #styleMode > span {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 18px;
+  border-radius: 50rem;
+  border: 3px solid var(--secondary);
+}
+
+#styleMode > span::after {
+  content: '';
+  position: absolute;
+  right: 0;
   display: inline-block;
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  border: 3px solid var(--secondary);
-}
-
-.unable {
   background-color: var(--quaternary-light);
+
+  transition: 250ms;
 }
 
-.disable {
+.disabled::after {
+  transform: translateX(calc(-100% + 4px));
+}
+
+.enabled {
+  transition: 250ms;
+  background-color: #496234;
+}
+
+.disabled {
+  transition: 250ms;
   background-color: transparent;
 }

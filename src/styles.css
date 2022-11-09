@@ -10,9 +10,11 @@
 
   --black2: #00000015;
   --black1: #0000000f;
+  --black0: #00000005;
 
   --white2: #ffffff15;
   --white1: #ffffff0f;
+  --white0: #ffffff03;
 }
 
 body {

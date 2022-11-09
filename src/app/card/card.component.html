@@ -1,14 +1,51 @@
 <div>
   <h3>{{ type }}</h3>
   <p [ngSwitch]="type">
-    <span *ngSwitchCase="'User'">Este é o card para um usuário comum e possue apenas algumas ferramentas</span>
-    <span *ngSwitchCase="'Admin'">Este é o card para um administrador e possue todas as ferramentas disponíveis</span>
-    <span *ngSwitchCase="'Superadmin'">Este é o card para um super administrador e pode gerenciar as ferramentas e demais usuários</span>
+    <span (click)="editDescription()" id="cardDescription" *ngSwitchCase="'User'">
+      {{ cardDescription }}
+    </span>
+    <textarea
+      (focusout)="editDescription()"
+      (keydown.enter)="preventNewLine($event)"
+      *ngIf="editingDescription"
+      name="descriptionInput"
+      id="descriptionInput"
+      [(ngModel)]="cardDescription"
+    ></textarea>
+
+    <span (click)="editDescription()" id="cardDescription" *ngSwitchCase="'Admin'">
+      {{ cardDescription }}
+    </span>
+    <textarea
+      (focusout)="editDescription()"
+      (keydown.enter)="preventNewLine($event)"
+      *ngIf="editingDescription"
+      name="descriptionInput"
+      id="descriptionInput"
+      [(ngModel)]="cardDescription"
+    ></textarea>
+
+    <span (click)="editDescription()" id="cardDescription" *ngSwitchCase="'Superadmin'">
+      {{ cardDescription }}
+    </span>
+    <textarea
+      (focusout)="editDescription()"
+      (keydown.enter)="preventNewLine($event)"
+      *ngIf="editingDescription"
+      name="descriptionInput"
+      id="descriptionInput"
+      [(ngModel)]="cardDescription"
+    ></textarea>
+
+
+    <!-- <span *ngSwitchCase="'Admin'">{{ cardDescription }}</span>
+    <span *ngSwitchCase="'Superadmin'">{{ cardDescription }}</span> -->
   </p>
 
   <ul>
     <li *ngFor="let product of products; let i = index">{{ product }} <span (click)="removeItem(i)">✖</span></li>
   </ul>
 
-  <button class="add-item" *ngIf="showingBtn" (click)="addItem()">Adicionar item</button>
+  <input type="text" name="newItem" id="newItem" [(ngModel)]="newItemText">
+  <button class="add-item" *ngIf="showingBtn" (click)="addItem()">Adicionar {{ newItemText }}</button>
 </div>

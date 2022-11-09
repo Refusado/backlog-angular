@@ -1,5 +1,5 @@
 div {
-  background-color: var(--black1);
+  background-color: var(--white0);
   display: inline-flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -37,6 +37,40 @@ div p {
   padding: 18px 8px;
   text-align: center;
   border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+#descriptionInput {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+
+  box-sizing: border-box;
+  color: transparent;
+  color: #2a2828;
+  caret-color: #2a2828;
+  background-color: #eee8e8;
+  display: inline;
+  outline: none;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  padding: 18px 9px;
+
+  box-shadow: #4834237e 0px 20px 40px -8px inset, #1b1b1a82 0px 10px 36px -8px inset;
+
+  border: none;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: medium;
+
+
+  overflow: hidden;
+  resize: none;
 }
 
 ul {
@@ -78,6 +112,7 @@ div button {
   background-color: transparent;
   align-self: flex-start;
   width: fit-content;
+  max-width: 100%;
   margin: 14px 0 20px 0;
   padding: 8px;
   border: 1px solid transparent;
@@ -86,6 +121,7 @@ div button {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: bold;
+  word-wrap: break-word;
 
   cursor: pointer;
   transition: 250ms ease-out;

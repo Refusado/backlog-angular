@@ -17,17 +17,17 @@ export class AppComponent {
 
   currentMode: string   = 'dark';
   isDarkMode: boolean = true;
-  btnClass: string = 'unable';
+  btnClass: string = 'enabled';
 
   changeMode() {
     if (this.isDarkMode) {
       this.isDarkMode = false;
       this.currentMode  = 'light';
-      this.btnClass = 'disable';
+      this.btnClass = 'disabled';
     } else {
       this.isDarkMode = true;
       this.currentMode = 'dark';
-      this.btnClass= 'unable';
+      this.btnClass= 'enabled';
     }
   }
 

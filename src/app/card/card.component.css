@@ -38,7 +38,6 @@ div p {
   text-align: center;
   border-radius: 8px;
   position: relative;
-  overflow: hidden;
 }
 
 #descriptionInput {
@@ -49,28 +48,26 @@ div p {
   top: 0;
 
   box-sizing: border-box;
-  color: transparent;
-  color: #2a2828;
+  color: #2a292899;
+  background-color: #edeae2;
   caret-color: #2a2828;
-  background-color: #eee8e8;
   display: inline;
-  outline: none;
   width: 100%;
   min-width: 100%;
   height: 100%;
   min-height: 100%;
   padding: 18px 9px;
 
-  box-shadow: #4834237e 0px 20px 40px -8px inset, #1b1b1a82 0px 10px 36px -8px inset;
-
+  outline: none;
   border: none;
+  border-radius: 3px;
   text-align: center;
   font-family: sans-serif;
   font-size: medium;
-
-
   overflow: hidden;
   resize: none;
+  box-shadow: #4834237e 0px 20px 40px -8px inset,
+              #1b1b1a82 0px 10px 36px -8px inset;
 }
 
 ul {
@@ -86,7 +83,7 @@ li {
   margin: 0;
   padding: 10px 2px 10px 16px;
 
-  transition: 150ms;
+  transition: 180ms;
 }
 
 li:hover {
@@ -105,6 +102,22 @@ li span {
 li span:hover {
   color: #b8b19e;
   color: var(--quintenary);
+}
+
+#newItemInput {
+  color: #b8b19e9f;
+  background-color: var(--white0);
+  border: none;
+  border-bottom: 1px solid var(--white2);
+  outline: none;
+  padding: 12px 8px;
+  transition: 100ms;
+}
+
+#newItemInput:focus {
+  color: #b8b19eec;
+  background-color: var(--white1);
+  border-bottom: 1px solid var(--quintenary);
 }
 
 div button {

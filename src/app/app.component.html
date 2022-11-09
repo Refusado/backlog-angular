@@ -3,9 +3,9 @@
 </header>
 <main>
   <div class="card-container">
-    <app-card [type]="'User'" *ngIf="showingCard; else unvailableCard"></app-card>
-    <app-card [type]="'Admin'" *ngIf="showingCard2; else unvailableCard"></app-card>
-    <app-card [type]="'Superadmin'" *ngIf="showingCard3; else unvailableCard"></app-card>
+    <app-card [cardName]="'Filesystem'" *ngIf="showingCard; else unvailableCard"></app-card>
+    <app-card [cardName]="'API de jogos'" *ngIf="showingCard2; else unvailableCard"></app-card>
+    <app-card [cardName]="'Quadro de desenhos'" *ngIf="showingCard3; else unvailableCard"></app-card>
   </div>
 </main>
 

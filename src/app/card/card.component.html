@@ -1,51 +1,28 @@
 <div>
-  <h3>{{ type }}</h3>
-  <p [ngSwitch]="type">
-    <span (click)="editDescription()" id="cardDescription" *ngSwitchCase="'User'">
+  <h3>{{ cardName }}</h3>
+  <p (click)="openInput()">
+    <span
+      id="cardDescription"
+    >
       {{ cardDescription }}
     </span>
     <textarea
-      (focusout)="editDescription()"
-      (keydown.enter)="preventNewLine($event)"
       *ngIf="editingDescription"
+      (keydown)="preventTyping($event)"
       name="descriptionInput"
       id="descriptionInput"
       [(ngModel)]="cardDescription"
     ></textarea>
-
-    <span (click)="editDescription()" id="cardDescription" *ngSwitchCase="'Admin'">
-      {{ cardDescription }}
-    </span>
-    <textarea
-      (focusout)="editDescription()"
-      (keydown.enter)="preventNewLine($event)"
-      *ngIf="editingDescription"
-      name="descriptionInput"
-      id="descriptionInput"
-      [(ngModel)]="cardDescription"
-    ></textarea>
-
-    <span (click)="editDescription()" id="cardDescription" *ngSwitchCase="'Superadmin'">
-      {{ cardDescription }}
-    </span>
-    <textarea
-      (focusout)="editDescription()"
-      (keydown.enter)="preventNewLine($event)"
-      *ngIf="editingDescription"
-      name="descriptionInput"
-      id="descriptionInput"
-      [(ngModel)]="cardDescription"
-    ></textarea>
-
-
-    <!-- <span *ngSwitchCase="'Admin'">{{ cardDescription }}</span>
-    <span *ngSwitchCase="'Superadmin'">{{ cardDescription }}</span> -->
   </p>
 
   <ul>
-    <li *ngFor="let product of products; let i = index">{{ product }} <span (click)="removeItem(i)">✖</span></li>
+    <li *ngFor="let item of listItems; let i = index">
+      {{ item }} <span (click)="removeItem(i)">✖</span>
+    </li>
   </ul>
 
-  <input type="text" name="newItem" id="newItem" [(ngModel)]="newItemText">
-  <button class="add-item" *ngIf="showingBtn" (click)="addItem()">Adicionar {{ newItemText }}</button>
+  <input type="text" name="newItem" id="newItemInput" (keydown.enter)="addItem()" [(ngModel)]="newItemText" />
+  <button class="add-item" *ngIf="showingAddBtn" (click)="addItem()">
+    Adicionar {{ newItemText }}
+  </button>
 </div>

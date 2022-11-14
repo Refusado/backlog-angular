@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title: string = 'diretivas-angular';
+  title: string = 'backlog-angular';
 
   showingCard: boolean = true;
   showingCard2: boolean = true;

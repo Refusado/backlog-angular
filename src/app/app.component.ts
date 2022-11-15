@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -14,22 +15,29 @@ export class AppComponent {
   showingCard3: boolean = true;
 
   cardType: string = 'computer';
+  btnClass: 'enabled' | 'disabled' = 'enabled';
 
-  currentMode: string   = 'dark';
-  isDarkMode: boolean = true;
-  btnClass: string = 'enabled';
+  currentMode: 'dark-mode' | 'light-mode' = 'light-mode';
 
-  changeMode() {
-    if (this.isDarkMode) {
-      this.isDarkMode = false;
-      this.currentMode  = 'light';
-      this.btnClass = 'disabled';
-    } else {
-      this.isDarkMode = true;
-      this.currentMode = 'dark';
-      this.btnClass= 'enabled';
-    }
+  constructor(
+    @Inject(DOCUMENT)
+    private document: Document
+  ) {
+    this.changeMode();
   }
 
+  changeMode() {
+    if (this.currentMode === 'dark-mode') {
+      this.document.body.classList.remove(this.currentMode);
+      this.currentMode = 'light-mode';
+      this.btnClass = 'disabled';
+      this.document.body.classList.add(this.currentMode);
+    } else {
+      this.document.body.classList.remove(this.currentMode);
+      this.currentMode = 'dark-mode';
+      this.btnClass = 'enabled';
+      this.document.body.classList.add(this.currentMode);
+    }
+  }
 
 }

@@ -1,11 +1,11 @@
 div {
-  background-color: var(--white0);
+  background-color: var(--card-bg);
   display: inline-flex;
   flex-flow: column nowrap;
   justify-content: center;
   width: 280px;
   padding: 20px;
-  border: 1px solid var(--white2);
+  border: 1px solid var(--card-border);
   border-radius: 6px;
 
   box-shadow: #00000033 0px 18px 50px -10px;
@@ -18,22 +18,22 @@ div {
 div:hover {
   scale: 0.98;
   background-color: transparent;
-  border: 1px solid var(--white1);
+  border: 1px solid var(--card-border2);
   box-shadow: none;
 }
 
 div h3 {
-  color: var(--tertiary);
+  color: var(--title-color);
   text-transform: uppercase;
   font-size: 21px;
   text-align: center;
   font-weight: bold;
-  text-shadow: 0px 0px 5px var(--white2);
+  text-shadow: 0px 0px 5px var(--title-shadow-color);
 }
 
 div p {
-  color: var(--primary-light);
-  background-color: #2f2c3255;
+  color: var(--text2-color);
+  background-color: var(--black2);
   padding: 18px 8px;
   text-align: center;
   border-radius: 8px;
@@ -48,26 +48,24 @@ div p {
   top: 0;
 
   box-sizing: border-box;
-  color: #2a292899;
-  background-color: #edeae2;
+  color: var(--edit-color);
+  background-color: var(--edit-bg);
   caret-color: #2a2828;
-  display: inline;
   width: 100%;
   min-width: 100%;
   height: 100%;
   min-height: 100%;
-  padding: 18px 9px;
+  padding: 15px 8px;
+  margin: 0;
 
   outline: none;
-  border: none;
+  border: 3px var(--edit-border) dashed;
   border-radius: 3px;
-  text-align: center;
   font-family: sans-serif;
   font-size: medium;
+  text-align: center;
   overflow: hidden;
   resize: none;
-  box-shadow: #4834237e 0px 20px 40px -8px inset,
-              #1b1b1a82 0px 10px 36px -8px inset;
 }
 
 ul {
@@ -75,7 +73,7 @@ ul {
 }
 
 li {
-  color: var(--secondary);
+  color: var(--text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,7 +89,7 @@ li:hover {
 }
 
 li span {
-  color: var(--tertiary);
+  color: var(--title-color);
   padding: 6px 12px;
   font-weight: bold;
 
@@ -100,12 +98,11 @@ li span {
 }
 
 li span:hover {
-  color: #b8b19e;
-  color: var(--quintenary);
+  color: var(--btn-hover);
 }
 
 #newItemInput {
-  color: #b8b19e9f;
+  color: var(--placeholder);
   background-color: var(--white0);
   border: none;
   border-bottom: 1px solid var(--white2);
@@ -115,13 +112,13 @@ li span:hover {
 }
 
 #newItemInput:focus {
-  color: #b8b19eec;
+  color: var(--tertiary);
   background-color: var(--white1);
-  border-bottom: 1px solid var(--quintenary);
+  border-bottom: 1px solid var(--btn-hover);
 }
 
 div button {
-  color: var(--tertiary);
+  color: var(--title-color);
   background-color: transparent;
   align-self: flex-start;
   width: fit-content;
@@ -141,5 +138,5 @@ div button {
 }
 
 div button:hover {
-  color: var(--quintenary);
+  color: var(--btn-hover);
 }

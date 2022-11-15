@@ -1,5 +1,8 @@
 :root {
   --primary: #3f3b43;
+  --primary1: #413D45;
+
+
   --primary-light: #9a989c;
   --secondary: #737a76;
   --tertiary: #b8b19e;
@@ -17,6 +20,30 @@
   --white0: #ffffff03;
 }
 
+.dark-mode {
+  --page-bg: var(--primary);
+
+  --card-bg: var(--primary1);
+  --card-border: var(--white2);
+  --card-border2: var(--white1);
+
+  --title-color: var(--tertiary);
+  --title-shadow-color: var(--white2);
+
+  --text-color: var(--secondary);
+  --text2-color: var(--primary-light);
+
+  --edit-color: var(--primary);
+  --edit-bg: var(--tertiary);
+  --edit-border: var(--primary);
+
+  --btn-hover: var(--quintenary);
+  --placeholder: var(--quaternary-light);
+}
+
+.light-mode {
+}
+
 body {
-  background-color: var(--primary);
+  background-color: var(--page-bg);
 }

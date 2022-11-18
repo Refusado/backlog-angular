@@ -1,6 +1,7 @@
 <header>
   <button (click)="changeMode()" id="styleMode"><span [ngClass]="btnClass"></span>Dark mode</button>
 </header>
+<p dinamicText [color]="title" (onValueChange)="test($event)">{{ title }}</p>
 <main>
   <div class="card-container">
     <app-card [cardName]="'Filesystem'" *ngIf="showingCard; else unvailableCard"></app-card>
@@ -12,5 +13,4 @@
 <ng-template #unvailableCard>
   <span>Não foi possível exibir este card :\</span>
 </ng-template>
-
 <router-outlet></router-outlet>

@@ -47,9 +47,8 @@ div p {
   top: 0;
 
   box-sizing: border-box;
-  color: var(--edit-color);
-  background-color: var(--edit-bg);
-  caret-color: #2a2828;
+  color: black;
+  background-color: white;
   width: 100%;
   min-width: 100%;
   height: 100%;
@@ -57,15 +56,12 @@ div p {
   padding: 15px 8px;
   margin: 0;
 
-  outline: none;
-  border: 3px var(--edit-border) dashed;
   border-radius: 3px;
   font-family: sans-serif;
   font-size: medium;
   text-align: center;
   overflow: hidden;
   resize: none;
-  box-shadow: #40bfff69 0px 0px 8px 1px;
 }
 
 ul {

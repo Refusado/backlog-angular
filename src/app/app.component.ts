@@ -9,6 +9,12 @@ import { Component, Inject, Input } from '@angular/core';
 
 export class AppComponent {
   title: string = 'backlog-angular';
+  color: string = 'violet';
+
+  test(event: any) {
+    console.log(event);
+    this.title = event;
+  }
 
   showingCard: boolean = true;
   showingCard2: boolean = true;
@@ -17,7 +23,7 @@ export class AppComponent {
   cardType: string = 'computer';
   btnClass: 'enabled' | 'disabled' = 'enabled';
 
-  currentMode: 'dark-mode' | 'light-mode' = 'dark-mode';
+  currentMode: 'dark-mode' | 'light-mode' = 'light-mode';
 
   constructor(
     @Inject(DOCUMENT)

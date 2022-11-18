@@ -17,7 +17,7 @@ export class AppComponent {
   cardType: string = 'computer';
   btnClass: 'enabled' | 'disabled' = 'enabled';
 
-  currentMode: 'dark-mode' | 'light-mode' = 'light-mode';
+  currentMode: 'dark-mode' | 'light-mode' = 'dark-mode';
 
   constructor(
     @Inject(DOCUMENT)

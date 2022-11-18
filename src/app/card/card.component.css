@@ -18,7 +18,6 @@ div {
 div:hover {
   scale: 0.98;
   background-color: transparent;
-  border: 1px solid var(--card-border2);
   box-shadow: none;
 }
 
@@ -66,6 +65,7 @@ div p {
   text-align: center;
   overflow: hidden;
   resize: none;
+  box-shadow: #40bfff69 0px 0px 8px 1px;
 }
 
 ul {

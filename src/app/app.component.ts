@@ -11,11 +11,6 @@ export class AppComponent {
   title: string = 'backlog-angular';
   color: string = 'violet';
 
-  test(event: any) {
-    console.log(event);
-    this.title = event;
-  }
-
   showingCard: boolean = true;
   showingCard2: boolean = true;
   showingCard3: boolean = true;

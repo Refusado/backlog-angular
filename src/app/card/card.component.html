@@ -1,22 +1,25 @@
 <div>
-  <h3>{{ cardName }}</h3>
-  <p (click)="openInput()">
-    <span
-      id="cardDescription"
-    >
+  <h3
+    dinamicText
+    [dinamicValue]="cardName"
+    (onDinamicChange)="cardName = $event"
+  >
+  {{ cardName }}</h3>
+  <p id="cardDescription"
+    dinamicText
+    [dinamicValue]="cardDescription"
+    (onDinamicChange)="cardDescription = $event"
+  >
       {{ cardDescription }}
-    </span>
-    <textarea
-      *ngIf="editingDescription"
-      (keydown)="preventTyping($event)"
-      name="descriptionInput"
-      id="descriptionInput"
-      [(ngModel)]="cardDescription"
-    ></textarea>
   </p>
 
   <ul>
-    <li *ngFor="let item of listItems; let i = index">
+    <li
+    *ngFor="let item of listItems; let i = index"
+    dinamicText
+    [dinamicValue]="listItems[i]"
+    (onDinamicChange)="listItems[i] = $event"
+    >
       {{ item }} <span (click)="removeItem(i)">✖</span>
     </li>
   </ul>

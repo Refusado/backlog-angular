@@ -75,16 +75,6 @@ body {
   background-color: var(--page-bg);
 }
 
-#testitem {
-  padding: 10px;
-  font-size: 20px;
-  font-family: sans-serif;
-  color: white;
-
-  width: 400px;
-  background-color: #545158;
-}
-
 .dinamicInput {
   position: absolute;
   left: 0;
@@ -93,13 +83,8 @@ body {
   top: 0;
 
   box-sizing: border-box;
-  color: black;
-  /* color: transparent; */
-  background-color: #ffffff5f;
-  /* background-color: transparent; */
-
-  outline: none;
-  caret-color: wheat;
+  color: #221b29;
+  background-color: #eff0f9;
 
   width: 100%;
   min-width: 100%;
@@ -109,6 +94,7 @@ body {
 
   margin: 0;
   border: none;
+  border-radius: 2px;
 
   overflow: hidden;
   resize: none;

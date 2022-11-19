@@ -14,12 +14,7 @@
   </p>
 
   <ul>
-    <li
-    *ngFor="let item of listItems; let i = index"
-    dinamicText
-    [dinamicValue]="listItems[i]"
-    (onDinamicChange)="listItems[i] = $event"
-    >
+    <li *ngFor="let item of listItems; let i = index">
       {{ item }} <span (click)="removeItem(i)">✖</span>
     </li>
   </ul>

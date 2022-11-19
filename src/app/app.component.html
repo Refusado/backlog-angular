@@ -1,36 +1,15 @@
 <header>
   <button (click)="changeMode()" id="styleMode">
-    <span [ngClass]="btnClass"></span>Dark mode
+    <span [ngClass]="toggleBtnClass"></span>Dark mode
   </button>
 </header>
 
-<p
-  dinamicText
-  [dinamicValue]="title"
-  (onDinamicChange)="title = $event"
-  id="testitem"
->
-  {{ title }}
-</p>
-
 <main>
   <div class="card-container">
-    <app-card
-      [cardName]="'Filesystem'"
-      *ngIf="showingCard; else unvailableCard"
-    ></app-card>
-    <app-card
-      [cardName]="'API de jogos'"
-      *ngIf="showingCard2; else unvailableCard"
-    ></app-card>
-    <app-card
-      [cardName]="'Quadro de desenhos'"
-      *ngIf="showingCard3; else unvailableCard"
-    ></app-card>
+    <app-card [cardName]="'Meu blog'"></app-card>
+    <app-card [cardName]="'Meu blog'"></app-card>
   </div>
 </main>
 
-<ng-template #unvailableCard>
-  <span>Não foi possível exibir este card :\</span>
-</ng-template>
+<ng-template #createCard> </ng-template>
 <router-outlet></router-outlet>

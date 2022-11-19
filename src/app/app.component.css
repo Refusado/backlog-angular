@@ -30,6 +30,7 @@
   height: 18px;
   border-radius: 50rem;
   border: 3px solid var(--secondary);
+  box-shadow: 0px 1px 8px -2px #0000005f;
 }
 
 #styleMode > span::after {
@@ -40,9 +41,10 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background-color: var(--quaternary-light);
+  background-color: var(--secondary);
 
-  transition: 250ms;
+  transition: 350ms;
+  box-shadow: 0px 0px 10px 0px #0000005f;
 }
 
 .disabled::after {
@@ -51,7 +53,7 @@
 
 .enabled {
   transition: 250ms;
-  background-color: #496234;
+  background-color: #3b5625;
 }
 
 .disabled {

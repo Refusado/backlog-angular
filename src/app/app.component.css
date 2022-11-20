@@ -1,10 +1,43 @@
-.card-container {
+#card-container {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
   width: min(92vw, 1720px);
   margin: 60px auto;
   gap: 80px;
+}
+
+#createCardBtn {
+  background-color: #ffffff17;
+  color: var(--title-color);
+  border: none;
+  outline: none;
+  height: fit-content;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+
+  padding: 18px;
+  border-radius: 8px;
+  font-size: large;
+  box-shadow: #00000025 0px 10px 50px -10px;
+  cursor: pointer;
+  transition: 450ms;
+}
+
+#createCardBtn:hover {
+  transform: scale(1.03);
+  background-color: #ffffff1c;
+  box-shadow: #00000010 0px 10px 50px -10px;
+}
+
+#createCardBtn > svg {
+  background-color: #00000046;
+  fill: #ffffffa7;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  margin: 20px auto 0 auto;
 }
 
 #styleMode {

@@ -10,10 +10,7 @@ export class CardComponent {
 
   listItems: string[] = [];
   newItemText: string = "Tarefa";
-
   cardDescription: string = "Escreva a descrição do projeto aqui.";
-
-  showingAddBtn: boolean = true;
 
   constructor() {
     this.listItems = [

@@ -1,14 +1,23 @@
-# Backlog Angular
+<h1 align=center>Backlog Angular</h1>
 
-Este é um projeto de desenvolvimento para revisar diretivas no angular acompanhando o curso *Single Page Application com Angular* do bootcamp **NTT DATA Diversidade em Tech**, um programa de desenvolvimento front-end da **[Digital Innovation One](https://www.dio.me/)**. Apesar do curso focar apenas na lógica básica de algumas diretivas, eu resolvi expandir um pouco o sistema e criar uma aplicação completa, visual e dinâmica com a interface amigável e seguindo os padrões do design. O sistem que resolvi criar serve para gerenciar as tarefas dos seus projetos ativos em formato de cartões!
+<p align="center" >Aplicação moderna de backlog desenvolvida em Angular para auxiliar na organização de projetos, listando as tarefas pendentes em cartões com textos dinâmicos.</p>
 
-## Versão
+<p align="center">
+    <img width="75.1%" src="src/assets/desktop-light.png">
+    <img width="18%" src="src/assets/mobile-dark.png">
+</p>
 
-O projeto foi desenvolvido usando a versão 14.2.1. do Angular CLI.
+## Demonstração
 
-
-## Deploy
-
-O projeto foi hospedado no próprio github com o auxilio da biblioteca [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages) e você conferir acessando este link:
+Esta aplicação está sendo hospedada aqui no github através do *Github Pages*, você pode conferir o resultado e usar a aplicação neste link:
 
   - https://refusado.github.io/backlog-angular/
+
+<details>
+    <summary>Vídeo para demonstração</summary>
+    <img align="center width="100%" src="src/assets/demo.gif">
+</details>
+
+## Angular
+
+O projeto foi desenvolvido usando a versão 14.2.1. do Angular CLI.

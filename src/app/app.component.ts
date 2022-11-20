@@ -11,10 +11,7 @@ export class AppComponent {
   title: string = 'backlog-angular';
   toggleBtnClass: 'enabled' | 'disabled' = 'enabled';
   currentMode: 'dark-mode' | 'light-mode' = 'light-mode';
-  cards: string[] = [
-    'diretivas-angular',
-    'filesystem'
-  ]
+  cards: string[] = ['Projeto']
 
   constructor(@Inject(DOCUMENT) private document: Document) {
     this.changeMode();
@@ -35,11 +32,6 @@ export class AppComponent {
   }
 
   createCard(): void {
-    // const container: HTMLElement | null = document.getElementById('card-container');
-    // const newCard: HTMLElement = document.createElement('app-card');
-    // if (container) {
-    //   container.appendChild(newCard);
-    // }
     this.cards.push('Projeto');
   }
 
